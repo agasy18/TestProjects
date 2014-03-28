@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApplication4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Ellipse Grid.Column="1" x:Name="Ellipse" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="100"  Stroke="Black" VerticalAlignment="Center" Width="267" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="{Binding Value, ElementName=slider}" ScaleY="{Binding Value, ElementName=slider}"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+
+        <StackPanel Grid.Column="0" Background="Bisque">
+            <Label Content="Color"/>
+            <RadioButton Content="Black" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
+            <RadioButton Content="Blue" IsChecked="True" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
+            <RadioButton Content="Green" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
+            <RadioButton Content="Cyan" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
+            <RadioButton Content="Red" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
+        </StackPanel>
+        <Slider x:Name="slider" Grid.Column="1" Value="1" Minimum="0.2" Maximum="3" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="325"/>
+
+    </Grid>
+</Window>
