@@ -24,5 +24,10 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("messsige box test", "caption text", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
+        }
     }
 }
