@@ -21,7 +21,7 @@
         </Ellipse>
 
         <StackPanel Grid.Column="0" Background="Bisque">
-            <Label Content="Color"/>
+            <Label Content="Color" FontStyle="Italic"/>
             <RadioButton Content="Black" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
             <RadioButton Content="Blue" IsChecked="True" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
             <RadioButton Content="Green" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ToggleButton_OnChecked"/>
